@@ -70,7 +70,7 @@ functions.cloudEvent('helloPubSub', async (cloudEvent) => {
     let sender_email = 'no-reply@csye6225-002277864.me'
     let receiver_email = jsonData.username
     let email_subject = 'Verification Email - Webapp'
-    let email_body = `Hello there,\n\nThank you for registering with our web app. Please click on the following link to verify your email address:\n\nhttp://csye6225-002277864.me:3000/verify-email?token=${record.uuid}\n\nBest regards,\nThe Web App Team`;
+    let email_body = `Hello there,\n\nThank you for registering with our web app. Please click on the following link to verify your email address:\n\nhttps://csye6225-002277864.me/verify-email?token=${record.uuid}\n\nBest regards,\nThe Web App Team`;
     sendMail(sender_email, receiver_email,email_subject, email_body)
     console.log(`Email Successfully queued ${receiver_email}`);
    
