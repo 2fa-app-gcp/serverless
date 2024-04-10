@@ -1,6 +1,6 @@
 const functions = require('@google-cloud/functions-framework');
 const mailgun = require('mailgun-js')
-    ({ apiKey: "b2d21f7e33738398371dde198b4f2fc8-309b0ef4-b69a1ddf", domain: "csye6225-002277864.me" });
+    ({ apiKey: process.env.APIKEY, domain: process.env.DOMAIN_NAME });
 const { Sequelize, DataTypes } = require('sequelize');
 
 const sequelize = new Sequelize({
